@@ -1,4 +1,4 @@
-<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo.gif" alt="DIVZ" style="border: 2px solid gray"></a></p>
+<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow" name="Demo"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo.gif" alt="DIVZ" style="border: 2px solid gray"></a></p>
 
 <p align='center'><i><small>
 Divz is a React UI component that lets you stack, swipe and zoom through divs on the 3D z-axis. <br/>Click the above to try out the demos.</small></i></p>
