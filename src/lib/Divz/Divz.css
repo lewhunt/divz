@@ -1,0 +1,27 @@
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.divz {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.divz-viewport {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  perspective: 800px;
+  perspective-origin: center;
+}
+
+.divz-list {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(-30000px);
+}

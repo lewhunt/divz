@@ -1,0 +1,54 @@
+.divz-item {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  user-select: none;
+  opacity: 0.2;
+  transition: opacity 0.4s;
+
+  &.selected {
+    opacity: 0.9;
+  }
+  &.selected.expanded {
+    opacity: 1;
+  }
+
+  &.dark-mode > * {
+    border: 0.5px solid rgba(250, 250, 250, 0.1);
+  }
+
+  /* override styling of children to suit - see app demo */
+  > * {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 45%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.44);
+    backface-visibility: hidden;
+    transition: transform 0.3s;
+    border-radius: 20px;
+    background-color: rgba(10, 10, 10, 0.2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    object-fit: cover;
+
+    img,
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &.expanded > * {
+    transform: translate(-50%, -50%) scale(0.88);
+  }
+}

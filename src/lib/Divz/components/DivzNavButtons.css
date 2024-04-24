@@ -1,0 +1,82 @@
+.divz-nav-buttons-viewport,
+.divz-nav-buttons {
+  height: 150px;
+  position: absolute;
+  color: black;
+}
+
+.divz-nav-buttons-viewport {
+  perspective: 150px;
+  top: calc(100% - 120px);
+  left: 50%;
+  @media (max-height: 480px) {
+    top: calc(100% - 105px);
+    transform: scale(0.7);
+  }
+}
+
+.divz-nav-buttons {
+  transform: rotateX(45deg) translate(-50%, -40%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(10, 10, 10, 0.3);
+  background-color: rgba(250, 250, 250, 0.5);
+  border-radius: 12px;
+  width: 90px;
+  padding: 10px 5px 0 5px;
+  z-index: 2;
+  gap: 10px;
+  transition: transform 0.3s;
+  &.expanded {
+    transform: rotateX(45deg) translate(-50%, 130%);
+  }
+  &.dark-mode {
+    border-color: rgba(250, 250, 250, 0.3);
+    background-color: rgba(10, 10, 10, 0.5);
+    .divz-nav-button,
+    .divz-nav-label {
+      color: rgb(250, 250, 250);
+      opacity: 0.6;
+    }
+  }
+
+  .divz-nav-label {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+    display: flex;
+    height: 100%;
+    width: 200%;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 400;
+    opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .divz-nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 50px;
+    opacity: 0.5;
+    color: rgb(10, 10, 10);
+    user-select: none;
+    transform: scaleX(1.3);
+    &.disabled {
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    &:not(.disabled):hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
