@@ -77,11 +77,11 @@ The demos illustrate how the component can be initialised with more props - alon
 
 ## Why create Divz?
 
-Divz was was initially created to showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
+Divz was was initially created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
 
 [![https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29](https://upload.wikimedia.org/wikipedia/en/1/1a/Timemachine_gallery_windowsquicklook20070611.jpg)](https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29)
 
-<p align='center'><i>Apple's Time Machine was the inspiration for Divz</i>
+<p><i>Apple's Time Machine was the inspiration for Divz</i>
 
 ## What Sets It Apart?
 
@@ -109,20 +109,23 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 | `isSnapEnabled`            | Set to `true` to ensure the transform animation is snap-fixed to only move between the div items                                               | `true`  |
 | `selectIndex`              | Set the index number to force it to instantly jump to position of a div child item. By default it will instead zoom animate to the first item. | `null`  |
 | `className`                | Insert additional classname values for overriding the component CSS styling                                                                    | `null`  |
-
-## Callback Props
-
-Callback props take a function that gets fired on various events:
-
-| Prop            | Description                                                                          |
-| --------------- | ------------------------------------------------------------------------------------ |
-| `onIndexChange` | Called when navigation occurs and the currently selected divz item has changed index |
-| `onPlaying`     | Called when autoPlay sequence starts or stops                                        |
-
-|
+| `onIndexChange`            | Called when navigation occurs and the currently selected divz item has changed index                                                           |         |
+| `onPlaying`                | Called when autoPlay sequence starts or stops                                                                                                  |         |
 
 <hr>
 
-## [:point_right: Try out the demos :point_left:](https://lewhunt.github.io/divz/)
+## Support
+
+I hope this has given you a good intro to the component and you can get some use out of it for your own projects...
+
+💬 Fire over a comment if you have any feedback, requests or issues 🐛
+
+⭐ Hit me with a Github star if you like the component and share it 🙏
+
+<hr>
+
+<video src='https://lewhunt.github.io/assets/readme/divz-demo.mov' ></video>
+
+<hr>
 
 **https://lewhunt.github.io/divz**
