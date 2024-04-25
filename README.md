@@ -120,12 +120,8 @@ I hope this has given you a good intro to the component and you can get some use
 
 💬 Fire over a comment if you have any feedback, requests or issues 🐛
 
-⭐ Hit me with a Github star if you like the component and share it 🙏
+⭐ Hit me with a Github star if you like the component and please share it 🙏
 
-<hr>
 
-<video src='https://lewhunt.github.io/assets/readme/divz-demo.mov' ></video>
+https://github.com/lewhunt/divz/assets/9886284/1fea8f35-92f5-4915-9af6-4a3a0a820d6f
 
-<hr>
-
-**https://lewhunt.github.io/divz**
