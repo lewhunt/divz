@@ -21,11 +21,14 @@ A React UI component that lets you stack, swipe and zoom through HTML elements o
 <p align='center'><i><small>
 Click on the above image to try out the demos</small></i></p>
 
+<br/>
+
 ## Installation
 
 ```bash
 npm install divz
 ```
+<br/>
 
 ## Basic Usage
 
@@ -49,6 +52,8 @@ function App() {
 ### [:point_right: Try out the demos :point_left:](https://lewhunt.github.io/divz/)
 
 **https://lewhunt.github.io/divz**
+
+<br/>
 
 ## Advanced Usage
 
@@ -75,23 +80,29 @@ The demos illustrate how the component can be initialised with more props - alon
 </Divz>
 ```
 
+<br/>
+
 ## Why create Divz?
 
 Divz was was initially created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
 
 [![https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29](https://upload.wikimedia.org/wikipedia/en/1/1a/Timemachine_gallery_windowsquicklook20070611.jpg)](https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29)
 
-<p><i>Apple's Time Machine was the inspiration for Divz</i>
+<p><i>Apple's Time Machine was the inspiration for Divz</i></p>
 
+<br/>
+  
 ## What Sets It Apart?
 
 Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of HTML divs or elements. The demos illustrate how it could work as a carousel, slideshow or gallery component. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
+
+<br/>
 
 ## How Does It Work?
 
 Under the hood, Divz performs CSS3 transforms on the core component and the child HTML elements, set dynamically with React TypeScript. The component is packaged using Vite to allow npm library integration.
 
-<hr>
+<br/>
 
 ## Props
 
@@ -112,7 +123,7 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 | `onIndexChange`            | Called when navigation occurs and the currently selected divz item has changed index                                                           |         |
 | `onPlaying`                | Called when autoPlay sequence starts or stops                                                                                                  |         |
 
-<hr>
+<br/>
 
 ## Support
 
@@ -122,6 +133,8 @@ I hope this has given you a good intro to the component and you can get some use
 
 ⭐ Hit me with a Github star if you like the component and please share it 🙏
 
+<br/>
+<br/>
 
 https://github.com/lewhunt/divz/assets/9886284/1fea8f35-92f5-4915-9af6-4a3a0a820d6f
 
