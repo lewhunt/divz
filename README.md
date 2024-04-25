@@ -19,7 +19,7 @@ A React UI component that lets you stack, swipe and zoom through HTML elements o
 <p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo1.gif" alt="https://lewhunt.github.io/divz/"></a></p>
 
 <p align='center'><i><small>
-Click on the above image to try out the demos</small></i></p>
+Click the above to try out the demos</small></i></p>
 
 <br/>
 
