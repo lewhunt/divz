@@ -1,8 +1,6 @@
-<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow" name="Demo"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo.gif" alt="DIVZ" style="border: 2px solid gray"></a></p>
-
-<p align='center'><i><small>
-Divz is a React UI component that lets you stack, swipe and zoom through divs on the 3D z-axis. <br/>Click the above to try out the demos.</small></i></p>
-
+<h1 align='center'>
+  Divz
+</h1>
 <p align='center'>
   <a href='https://www.npmjs.com/package/divz'>
     <img src='https://img.shields.io/npm/v/divz.svg' alt='Latest npm version'>
@@ -15,6 +13,14 @@ Divz is a React UI component that lets you stack, swipe and zoom through divs on
   </a>
 </p>
 
+<p align='center'><i><small>
+A React UI component that lets you stack, swipe and zoom through HTML elements on the 3D z-axis</small></i></p>
+
+<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo1.gif" alt="https://lewhunt.github.io/divz/"></a></p>
+
+<p align='center'><i><small>
+Click on the above image to try out the demos</small></i></p>
+
 ## Installation
 
 ```bash
@@ -23,7 +29,7 @@ npm install divz
 
 ## Basic Usage
 
-Just import the component and render it in your app or page:
+Import the component and render it in your app or page, wrapping it around your list of divs or other HTML elements:
 
 ```jsx
 import { Divz } from "divz";
@@ -39,6 +45,10 @@ function App() {
   );
 }
 ```
+
+### [:point_right: Try out the demos :point_left:](https://lewhunt.github.io/divz/)
+
+**https://lewhunt.github.io/divz**
 
 ## Advanced Usage
 
@@ -67,7 +77,7 @@ The demos illustrate how the component can be initialised with more props - alon
 
 ## Why create Divz?
 
-Divz was was created to showcase portfolio work within an experimental pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
+Divz was was initially created to showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
 
 [![https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29](https://upload.wikimedia.org/wikipedia/en/1/1a/Timemachine_gallery_windowsquicklook20070611.jpg)](https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29)
 
@@ -75,11 +85,11 @@ Divz was was created to showcase portfolio work within an experimental pseudo-3D
 
 ## What Sets It Apart?
 
-Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of HTML divs or elements. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
+Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of HTML divs or elements. The demos illustrate how it could work as a carousel, slideshow or gallery component. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
 
 ## How Does It Work?
 
-Under the hood Divz performs CSS3 transforms on child elements of the component, set dynamically with React TypeScript. The component is packaged using Vite to allow npm library integration.
+Under the hood, Divz performs CSS3 transforms on the core component and the child HTML elements, set dynamically with React TypeScript. The component is packaged using Vite to allow npm library integration.
 
 <hr>
 
@@ -113,6 +123,6 @@ Callback props take a function that gets fired on various events:
 
 <hr>
 
-## [:point_right: Try out the demo :point_left:](https://lewhunt.github.io/divz/)
+## [:point_right: Try out the demos :point_left:](https://lewhunt.github.io/divz/)
 
 **https://lewhunt.github.io/divz**
