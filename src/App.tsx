@@ -68,10 +68,7 @@ function Demo1() {
 function Demo2() {
   return (
     <>
-      <img
-        className="background"
-        src="https://image.tmdb.org/t/p/w1280/rRBD8ORo9y34tYkAQJVbn4Ml6tu.jpg"
-      />
+      <img className="background" src="./demo2/desert-1101123_1920.jpg" />
 
       <Divz
         className="demo2"
@@ -81,27 +78,19 @@ function Demo2() {
         onPlaying={(i) => console.log("divz playing: ", i)}
       >
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/rRBD8ORo9y34tYkAQJVbn4Ml6tu.jpg" />
+          <img src="./demo2/desert-1101123_1920.jpg" />
         </div>
 
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/vJGgox2d4HWmm3icilCytCC6RCR.jpg" />
+          <img src="./demo2/desert-1916882_1920.jpg" />
         </div>
 
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/36q3LejjQbpyhhuMpJN6kALbFtR.jpg" />
+          <img src="./demo2/camels-4134934_1920.jpg" />
         </div>
 
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/wauiyiVXpdvTvt2CzdSWbYlbaE3.jpg" />
-        </div>
-
-        <div>
-          <img src="https://image.tmdb.org/t/p/w1280/24Ov8wnusgnzXwjV1eDm0Lzo5da.jpg" />
-        </div>
-
-        <div>
-          <img src="https://image.tmdb.org/t/p/w1280/uUVQCwBsWdQDMssXv1TRvYKnXgS.jpg" />
+          <img src="./demo2/namibia-2049203_1920.jpg" />
         </div>
       </Divz>
     </>
@@ -120,15 +109,15 @@ function Demo3() {
 
       <Divz autoPlay={true} className="demo3" isDarkMode={true}>
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/7o07Xkj2T19e9ken5IjAv1GNmBK.jpg" />
+          <img src="./demo3/astronaut-4106766_1280.jpg" />
         </div>
 
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/6YroYkBhh0vVfzmMIOXIxmEH0Go.jpg" />
+          <img src="./demo3/astronaut-6052199_1920.jpg" />
         </div>
 
         <div>
-          <img src="https://image.tmdb.org/t/p/w1280/xvvYUrARXJzOuAbU7Hig5hSF0kz.jpg" />
+          <img src="./demo3/plane-5462276_1920.jpg" />
         </div>
 
         <div>

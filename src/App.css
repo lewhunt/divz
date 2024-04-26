@@ -111,7 +111,7 @@ img.background {
   opacity: 0;
   animation: fade-in 0.3s forwards;
   backface-visibility: hidden;
-  transform: translateZ(0) scale(2) rotate(0deg);
+  transform: translateZ(0) scale(1.2) rotate(0deg);
 }
 
 video.background {
@@ -128,6 +128,6 @@ video.background {
     opacity: 0;
   }
   100% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 }

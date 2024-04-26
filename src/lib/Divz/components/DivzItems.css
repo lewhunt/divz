@@ -22,6 +22,7 @@
   /* override styling of children to suit - see app demo */
   > * {
     position: absolute;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
