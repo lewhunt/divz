@@ -14,7 +14,7 @@
 </p>
 
 <p align='center'><i><small>
-A React UI component that lets you stack, swipe, slide & zoom through HTML elements on the 3D z-axis</small></i></p>
+A React UI component that lets you stack, swipe & slide through HTML elements on the 3D z-axis</small></i></p>
 
 <p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo1.gif" alt="https://lewhunt.github.io/divz/"></a></p>
 
