@@ -33,7 +33,7 @@ function App() {
         </div>
         <h1>divz</h1>
         <small>
-          A React component that lets you stack, swipe and select divs on the 3D
+          A React component that lets you stack, swipe and slide divs on the 3D
           z-axis
         </small>
         <a className="github" href="https://github.com/lewhunt/divz">

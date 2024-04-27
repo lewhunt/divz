@@ -1,7 +1,7 @@
 {
   "name": "divz",
   "author": "Lewis Hunt",
-  "description": "A React UI component that lets you stack, swipe, select and zoom through HTML elements on the 3D z-axis",
+  "description": "A React UI component that lets you stack, swipe, slide and zoom through HTML elements on the 3D z-axis",
   "private": false,
   "version": "1.0.1",
   "type": "module",
