@@ -106,7 +106,7 @@ export const Divz: React.FC<DivzProps> = ({
       divzListRef.current.style.transition = `transform 0.01s ease`;
       zoomLevel.current = minZoom + index * snapInterval;
       divzListRef.current.style.transform = `translateZ(${zoomLevel.current}px)`;
-      setSelectedIndex(index); // was updateSelectedIndex();
+      setSelectedIndex(index);
     }
   };
 

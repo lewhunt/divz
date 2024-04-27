@@ -19,7 +19,7 @@ A React UI component that lets you stack, swipe and zoom through HTML elements o
 <p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo1.gif" alt="https://lewhunt.github.io/divz/"></a></p>
 
 <p align='center'><i><small>
-Click above to try out the demo</small></i></p>
+Click above to try out the demos</small></i></p>
 
 <br/>
 
@@ -95,7 +95,7 @@ Divz was was initially created to quickly showcase portfolio work within a pseud
   
 ## What Sets It Apart?
 
-Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of HTML divs or elements. The demos illustrate how it could work as a carousel, slideshow or gallery component. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
+Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of divs or other HTML elements. The demos illustrate how it could work as a carousel, slideshow or gallery component. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
 
 <br/>
 
@@ -128,11 +128,11 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 
 ## Support
 
-I hope this has given you a good intro to the component and you can get some use out of it for your own projects...
+I hope this has given a good intro to the component and you get some use out of it for your own projects!
 
-💬 Fire over a comment if you have any feedback, requests or issues 🐛
+[💬 Fire over a comment](https://github.com/lewhunt/divz/issues) if you have any feedback, requests or issues 🐛
 
-⭐ Hit me with a Github star if you like the component and please share it 🙏
+[⭐ Give it a star](https://github.com/lewhunt/divz) if you like the component or want to bookmark it 🙏
 
 <br/>
 <br/>

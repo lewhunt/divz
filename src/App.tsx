@@ -102,7 +102,7 @@ function Demo3() {
     <>
       <video autoPlay playsInline loop muted className="background">
         <source
-          src="https://lewhunt.github.io/assets/backdrops/star-stars-night-space-light-121702.mp4"
+          src="./demo3/star-stars-night-space-light-121702.mp4"
           type="video/mp4"
         />
       </video>
@@ -113,17 +113,17 @@ function Demo3() {
         </div>
 
         <div>
-          <img src="./demo3/astronaut-6052199_1920.jpg" />
+          <img src="./demo3/astronaut-6052199_1280.jpg" />
         </div>
 
         <div>
-          <img src="./demo3/plane-5462276_1920.jpg" />
+          <img src="./demo3/plane-5462276_1280.jpg" />
         </div>
 
         <div>
           <video autoPlay playsInline loop muted>
             <source
-              src="https://lewhunt.github.io/assets/backdrops/space-ship-magic-purple-sci-fi-53601.mp4"
+              src="./demo3/space-ship-magic-purple-sci-fi-53601.mp4"
               type="video/mp4"
             />
           </video>
