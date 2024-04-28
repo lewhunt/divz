@@ -16,7 +16,7 @@
 <p align='center'><i><small>
 A React UI component that lets you scroll, swipe & zoom through HTML elements on the 3D z-axis</small></i></p>
 
-<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo2.gif" alt="https://lewhunt.github.io/divz/"></a></p>
+<p dir="auto" align='center'><a href="https://lewhunt.github.io/divz/" rel="nofollow"><img  align='center' src="https://lewhunt.github.io/assets/readme/divz-demo1.gif" alt="https://lewhunt.github.io/divz/"></a></p>
 
 <p align='center'><i><small>
 Click above to try out the demos</small></i></p>
@@ -138,6 +138,3 @@ I hope this has given a good intro to the component and you get some use out of 
 <br/>
 
 https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546ff18
-
-
-
