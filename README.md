@@ -138,3 +138,5 @@ I hope this has given a good intro to the component and you get some use out of 
 
 [⭐ Give it a star](https://github.com/lewhunt/divz) if you like the component or want to bookmark it 🙏
 
+<br/>
+
