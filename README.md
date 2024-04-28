@@ -83,6 +83,10 @@ The demos illustrate how the component can be initialised with more props - alon
 
 <br/>
 
+https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546ff18
+
+<br/>
+
 ## Why create Divz?
 
 Divz was was initially created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
@@ -134,7 +138,3 @@ I hope this has given a good intro to the component and you get some use out of 
 
 [⭐ Give it a star](https://github.com/lewhunt/divz) if you like the component or want to bookmark it 🙏
 
-<br/>
-<br/>
-
-https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546ff18
