@@ -137,4 +137,7 @@ I hope this has given a good intro to the component and you get some use out of 
 <br/>
 <br/>
 
-https://github.com/lewhunt/divz/assets/9886284/1fea8f35-92f5-4915-9af6-4a3a0a820d6f
+https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546ff18
+
+
+
