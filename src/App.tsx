@@ -33,7 +33,7 @@ function App() {
         </div>
         <h1>divz</h1>
         <small>
-          A React component to scroll, swipe and slide through divs on the 3D
+          A React component to scroll, swipe and zoom through divs on the 3D
           z-axis
         </small>
         <a className="github" href="https://github.com/lewhunt/divz">
