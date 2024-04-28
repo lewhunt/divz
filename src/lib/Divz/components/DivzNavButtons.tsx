@@ -31,7 +31,7 @@ export const DivzNavButtons: React.FC<DivzNavButtonsProps> = ({
         >
           <div
             className={cn("divz-nav-button", {
-              disabled: selectedIndex === itemsCount - 1,
+              disabled: selectedIndex === 0,
             })}
             onClick={handleNext}
             onTouchStart={handleNext}
@@ -44,7 +44,7 @@ export const DivzNavButtons: React.FC<DivzNavButtonsProps> = ({
           </div>
           <div
             className={cn("divz-nav-button", {
-              disabled: selectedIndex === 0,
+              disabled: selectedIndex === itemsCount - 1,
             })}
             onClick={handlePrevious}
             onTouchStart={handlePrevious}

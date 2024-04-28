@@ -36,7 +36,7 @@ export const Divz: React.FC<DivzProps> = ({
   isDarkMode = false,
   autoPlay = false,
   isAutoPlayLooped = true,
-  autoPlayDuration = 6000,
+  autoPlayDuration = 5000,
   showPlayButton = true,
   showNavButtons = true,
   showExpandButton = true,
@@ -56,7 +56,7 @@ export const Divz: React.FC<DivzProps> = ({
   const zoomIncrement = isSnapEnabled ? snapInterval : snapInterval / 3;
   const maxZoom = 0;
   const minZoom = -(numChildren * snapInterval) + snapInterval;
-  const zoomLevel = useRef<number>(minZoom);
+  const zoomLevel = useRef<number>(maxZoom);
 
   useEffect(() => {
     if (!divzListRef.current) return;
@@ -89,7 +89,7 @@ export const Divz: React.FC<DivzProps> = ({
     const items = divzListRef.current?.children;
     if (items) {
       for (let i = 0; i < items.length; i++) {
-        const translateZ = snapInterval * (items.length - i);
+        const translateZ = snapInterval * i + snapInterval;
         (
           items[i] as HTMLElement
         ).style.transform = `translateZ(${translateZ}px)`;
@@ -104,7 +104,7 @@ export const Divz: React.FC<DivzProps> = ({
   const updateTranslateFromIndex = (index: number) => {
     if (index !== undefined && index < numChildren && divzListRef.current) {
       divzListRef.current.style.transition = `transform 0.01s ease`;
-      zoomLevel.current = minZoom + index * snapInterval;
+      zoomLevel.current = maxZoom - index * snapInterval;
       divzListRef.current.style.transform = `translateZ(${zoomLevel.current}px)`;
       setSelectedIndex(index);
     }
@@ -120,7 +120,7 @@ export const Divz: React.FC<DivzProps> = ({
     if (playing) {
       autoplayTimer = setInterval(() => {
         if (selectedIndex < numChildren - 1) {
-          zoomLevel.current += zoomIncrement;
+          zoomLevel.current -= zoomIncrement;
           changeTranslate();
         } else {
           updateTranslateFromIndex(0);
@@ -143,8 +143,7 @@ export const Divz: React.FC<DivzProps> = ({
   useEffect(() => setPlaying(autoPlay), [autoPlay]);
 
   const updateSelectedIndex = () => {
-    const currentIndex =
-      numChildren - 1 - Math.abs(Math.round(zoomLevel.current / snapInterval));
+    const currentIndex = Math.abs(Math.round(zoomLevel.current / snapInterval));
     setSelectedIndex(currentIndex);
   };
 
@@ -178,11 +177,11 @@ export const Divz: React.FC<DivzProps> = ({
     const deltaY = touchY - touchStartY;
 
     if (deltaY > 10) {
-      if (zoomLevel.current < minZoom) return;
-      zoomLevel.current -= zoomIncrement / 4;
-    } else if (deltaY < -10) {
       if (zoomLevel.current > maxZoom) return;
       zoomLevel.current += zoomIncrement / 4;
+    } else if (deltaY < -10) {
+      if (zoomLevel.current < minZoom) return;
+      zoomLevel.current -= zoomIncrement / 4;
     }
 
     setPlaying(false);
@@ -196,11 +195,11 @@ export const Divz: React.FC<DivzProps> = ({
     }
 
     if (event.deltaY > 10) {
-      if (zoomLevel.current > maxZoom) return;
-      zoomLevel.current += zoomIncrement / 10;
-    } else if (event.deltaY < -10) {
       if (zoomLevel.current < minZoom) return;
       zoomLevel.current -= zoomIncrement / 10;
+    } else if (event.deltaY < -10) {
+      if (zoomLevel.current > maxZoom) return;
+      zoomLevel.current += zoomIncrement / 10;
     }
 
     setPlaying(false);
