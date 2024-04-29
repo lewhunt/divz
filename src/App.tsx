@@ -68,7 +68,7 @@ function Demo1() {
 function Demo2() {
   return (
     <>
-      <img className="background" src="./demo2/desert-1101123_1920.jpg" />
+      <img className="background" src="./demo2/desert-7162926_1920.jpg" />
 
       <Divz
         className="demo2"
@@ -82,7 +82,7 @@ function Demo2() {
         </div>
 
         <div>
-          <img src="./demo2/desert-1916882_1920.jpg" />
+          <img src="./demo2/desert-7162926_1920.jpg" />
         </div>
 
         <div>

@@ -10,8 +10,8 @@
   top: calc(100% - 120px);
   left: 50%;
   @media (max-height: 480px) {
-    top: calc(100% - 105px);
-    transform: scale(0.7);
+    top: calc(100% - 100px);
+    transform: scale(0.65);
   }
 }
 
