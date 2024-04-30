@@ -99,9 +99,9 @@ Divz was created to quickly showcase portfolio work within a pseudo-3D environme
   
 ## What Sets It Apart?
 
-- <b>Simple Integration:</b> Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of divs or other HTML elements
-- <b>Various Uses:</b> The demos illustrate how it could work as a carousel, slideshow or gallery but there are other use cases: <i>an experimental way to navigate web content</i>
-- <b>Broad Device Support:</b> Various modes of navigation are supported: touch for mobile, cursor/trackpad for desktop, and arrow keys for TV devices
+- <b>Simplified Integration:</b> Divz is crafted for seamless integration, offering responsiveness and user-friendliness by acting as a straightforward wrapper around a list of divs or other HTML elements.
+- <b>Diverse Applications:</b> While the demos showcase its versatility as a carousel, slideshow, or gallery, Divz opens the door to a range of other potential uses. Consider it an innovative, experimental method for navigating web content.
+- <b>Comprehensive Device Compatibility:</b> Divz accommodates various navigation modes, including touch for mobile devices, cursor/trackpad for desktop users, and arrow keys for TV devices.
 
 <br/>
 
