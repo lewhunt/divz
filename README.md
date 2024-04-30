@@ -89,7 +89,7 @@ https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546f
 
 ## Why create Divz?
 
-Divz was was initially created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
+Divz was created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
 
 [![https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29](https://upload.wikimedia.org/wikipedia/en/1/1a/Timemachine_gallery_windowsquicklook20070611.jpg)](https://en.wikipedia.org/wiki/Time_Machine_%28macOS%29)
 
@@ -137,6 +137,4 @@ I hope this has given a good intro to the component and you get some use out of 
 [💬 Fire over a comment](https://github.com/lewhunt/divz/issues) if you have any feedback, requests or issues 🐛
 
 [⭐ Give it a star](https://github.com/lewhunt/divz) if you like the component or want to bookmark it 🙏
-
-<br/>
 
