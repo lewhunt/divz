@@ -87,7 +87,7 @@ https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546f
 
 <br/>
 
-## Why create Divz?
+## Why Divz?
 
 Divz was created to quickly showcase portfolio work within a pseudo-3D environment, loosely inspired by Apple's Time Machine interface which allows the user to zoom through historical Finder windows:
 
@@ -99,7 +99,9 @@ Divz was created to quickly showcase portfolio work within a pseudo-3D environme
   
 ## What Sets It Apart?
 
-Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of divs or other HTML elements. The demos illustrate how it could work as a carousel, slideshow or gallery component. Various modes of navigation are supported: touch for mobile, cursor and trackpad for desktop, plus arrow keys for big-screen devices.
+- <b>Simple Integration:</b> Divz is designed to be responsive and easy to use, acting as a simple wrapper around a list of divs or other HTML elements
+- <b>Various Uses:</b> The demos illustrate how it could work as a carousel, slideshow or gallery but there are other use cases: <i>an experimental way to navigate web content</i>
+- <b>Broad Device Support:</b> Various modes of navigation are supported: touch for mobile, cursor/trackpad for desktop, and arrow keys for TV devices
 
 <br/>
 
