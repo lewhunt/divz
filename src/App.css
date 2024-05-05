@@ -104,6 +104,7 @@
   /* customised divz-item stylings & sizings for demo4 */
   &.demo4 {
     .divz-item > * {
+      border: none;
       border-radius: 10px;
       width: auto;
       align-items: flex-end;
