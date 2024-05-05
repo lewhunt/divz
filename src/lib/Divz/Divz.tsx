@@ -72,14 +72,20 @@ export const Divz: React.FC<DivzProps> = ({
           setPlaying((prev: boolean) => !prev);
     };
 
-    divzListRef.current.addEventListener("transitionstart", () => {
+    const handleTransitionStart = () => {
       setIsTransitioning(true);
       updateSelectedIndex();
-    });
-    divzListRef.current.addEventListener("transitionend", () => {
-      setIsTransitioning(false);
-    });
+    };
 
+    const handleTransitionEnd = () => {
+      setIsTransitioning(false);
+    };
+
+    divzListRef.current.addEventListener(
+      "transitionstart",
+      handleTransitionStart
+    );
+    divzListRef.current.addEventListener("transitionend", handleTransitionEnd);
     document.addEventListener("keydown", handleKeyDown);
 
     divzListRef.current.style.transition = `transform 0.5s ease`;
@@ -97,6 +103,14 @@ export const Divz: React.FC<DivzProps> = ({
     }
 
     return () => {
+      divzListRef.current?.removeEventListener(
+        "transitionstart",
+        handleTransitionStart
+      );
+      divzListRef.current?.removeEventListener(
+        "transitionend",
+        handleTransitionEnd
+      );
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
