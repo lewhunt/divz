@@ -130,7 +130,7 @@
       > * {
         transform: translate(-50%, -50%) scale(0.8);
         figcaption {
-          transform: translate(25%, 25%) scale(0.5);
+          transform: translate(25%, 25%) scale(0.55);
         }
         @media (orientation: portrait) {
           transform: translate(-50%, -50%) scale(0.85);
