@@ -4,12 +4,12 @@ import { Divz } from "./lib/Divz";
 import "./App.css";
 
 function App() {
-  const [demo, setDemo] = useState<number>(2);
+  const [demo, setDemo] = useState<number>(1);
 
   useEffect(() => randomizeDemo(), []);
 
   const randomizeDemo = () => {
-    const randomNumber = Math.floor(Math.random() * 3) + 1;
+    const randomNumber = Math.floor(Math.random() * 4) + 1;
     setDemo(randomNumber);
   };
 
@@ -18,18 +18,18 @@ function App() {
   };
 
   return (
-    <div className={`app ${demo === 3 ? "dark-mode" : ""}`}>
+    <div className={`app ${demo >= 3 ? "dark-mode" : ""}`}>
       <div className="app-header">
         <div className={`demo-list`}>
-          <a className={isActive(1)} onClick={() => setDemo(1)}>
-            Demo1
-          </a>
-          <a className={isActive(2)} onClick={() => setDemo(2)}>
-            Demo2
-          </a>
-          <a className={isActive(3)} onClick={() => setDemo(3)}>
-            Demo3
-          </a>
+          {[1, 2, 3, 4].map((demoNumber) => (
+            <a
+              key={demoNumber}
+              className={isActive(demoNumber)}
+              onClick={() => setDemo(demoNumber)}
+            >
+              Demo{demoNumber}
+            </a>
+          ))}
         </div>
         <h1>divz</h1>
         <small>
@@ -41,7 +41,15 @@ function App() {
         </a>
       </div>
 
-      {demo === 1 ? <Demo1 /> : demo === 2 ? <Demo2 /> : <Demo3 />}
+      {demo === 1 ? (
+        <Demo1 />
+      ) : demo === 2 ? (
+        <Demo2 />
+      ) : demo === 3 ? (
+        <Demo3 />
+      ) : (
+        <Demo4 />
+      )}
     </div>
   );
 }
@@ -128,6 +136,40 @@ function Demo3() {
             />
           </video>
         </div>
+      </Divz>
+    </>
+  );
+}
+
+const demo4Images: string[] = [];
+
+/* Demo 4 images generated in Midjourney by Manoela Ilic:
+https://github.com/codrops/GridItemHoverEffect/
+*/
+for (let i = 1; i <= 22; i++) {
+  demo4Images.push(`./demo4/${i}.jpg`);
+}
+
+/* 
+Demo 4 design based on works by Alena Orlova and Manoela Ilic:
+https://dribbble.com/shots/21567003-SOTA-Branding
+https://github.com/codrops/GridItemHoverEffect/
+*/
+function Demo4() {
+  return (
+    <>
+      <img className="background demo4" src="./demo4/bg.jpg" />
+
+      <Divz className="demo4" autoPlay={true} isDarkMode={true}>
+        {demo4Images.map((imageUrl, index) => (
+          <figure key={index}>
+            <img src={imageUrl} />
+            <figcaption>
+              <div>{(index + 1).toString().padStart(2, "0")}</div>
+              <div>{imageUrl}</div>
+            </figcaption>
+          </figure>
+        ))}
       </Divz>
     </>
   );

@@ -100,6 +100,83 @@
       font-size: 50px;
     }
   }
+
+  /* customised divz-item stylings & sizings for demo4 */
+  &.demo4 {
+    .divz-item > * {
+      border-radius: 10px;
+      width: auto;
+      align-items: flex-end;
+      justify-content: end;
+      img {
+        height: 100%;
+        width: auto;
+      }
+      @media (orientation: portrait) {
+        transform: translate(-50%, -50%) scale(0.35);
+      }
+    }
+    .divz-item.selected {
+      figcaption {
+        display: flex;
+        animation: fade-in-full 0.5s 0.5s forwards;
+        @media (max-height: 480px) {
+          margin: 5px;
+          transform: translate(25%, 20%) scale(0.5);
+        }
+      }
+    }
+    .divz-item.expanded {
+      > * {
+        figcaption {
+          transform: translate(25%, 20%) scale(0.5);
+        }
+        @media (orientation: portrait) {
+          transform: translate(-50%, -50%) scale(0.85);
+          figcaption {
+            transform: translate(50%, 25%) scale(0.5);
+          }
+        }
+      }
+    }
+  }
+  /* figcaption used in demo 4 for text label overlays */
+  figcaption {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(200, 200, 200, 0.15);
+    color: white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+
+    div {
+      user-select: none;
+      pointer-events: none;
+    }
+    div:first-child {
+      font-size: 50px;
+      line-height: 1;
+      font-family: monospace;
+      @media (max-height: 480px) {
+        font-size: 30px;
+      }
+    }
+    div:last-child {
+      font-size: 12px;
+      @media (max-height: 480px) {
+        font-size: 10px;
+      }
+    }
+  }
 }
 
 img.background {
@@ -107,12 +184,18 @@ img.background {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
+  user-select: none;
   filter: blur(60px);
   opacity: 0;
   animation: fade-in 0.3s forwards;
   backface-visibility: hidden;
   transform: translateZ(0) scale(1.2) rotate(0deg);
+
+  &.demo4 {
+    filter: none;
+    transform: none;
+    animation: fade-in-full 0.3s forwards;
+  }
 }
 
 video.background {
@@ -130,5 +213,23 @@ video.background {
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+@keyframes fade-in-full {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out-full {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
