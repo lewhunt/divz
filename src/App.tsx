@@ -86,7 +86,7 @@ function Demo2() {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <>
-      <img className="background" src={`./demo2/${selectedIndex + 1}.jpg`} />
+      <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
 
       <Divz
         className="demo2"
@@ -158,7 +158,7 @@ https://github.com/codrops/GridItemHoverEffect/
 function Demo4() {
   return (
     <>
-      <img className="background demo4" src="./demo4/bg.jpg" />
+      <img className="background" src="./demo4/bg.jpg" />
 
       <Divz className="demo4" autoPlay={true} isDarkMode={true}>
         {demo4Images.map((imageUrl, index) => (

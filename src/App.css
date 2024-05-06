@@ -182,31 +182,20 @@
   }
 }
 
-img.background {
+.background {
   position: fixed;
   width: 100%;
   height: 100%;
   object-fit: cover;
   user-select: none;
-  filter: blur(60px);
   opacity: 0;
-  animation: fade-in 0.3s forwards;
-  backface-visibility: hidden;
-  transform: translateZ(0) scale(1.2) rotate(0deg);
+}
 
-  &.demo4 {
-    filter: none;
-    transform: none;
-    animation: fade-in-full 0.3s forwards;
-  }
+img.background {
+  animation: fade-in-full 0.5s 0.2s forwards;
 }
 
 video.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
   animation: fade-in 2s 0.2s forwards;
 }
 
@@ -225,14 +214,5 @@ video.background {
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes fade-out-full {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
