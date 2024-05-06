@@ -132,6 +132,15 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 
 <br/>
 
+## Credits
+
+Sample media used in the demos are from various open source projects:
+- Demo 2 images are generated in Midjourney by Manoela Ilic [(link)](https://github.com/codrops/LayersAnimation/)
+- Demo 3 images and video are from Pixabay [(link)](https://pixabay.com/)
+- Demo 4 images are generated in Midjourney by Manoela Ilic [(link)](https://github.com/codrops/GridItemHoverEffect/)
+
+<br/>
+
 ## Support
 
 I hope this has given a good intro to the component and you get some use out of it for your own projects!
