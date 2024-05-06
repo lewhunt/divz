@@ -78,7 +78,7 @@ const demo2Images: string[] = [];
 /* Demo 2 images generated in Midjourney by Manoela Ilic:
 https://github.com/codrops/LayersAnimation/
 */
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 5; i++) {
   demo2Images.push(`./demo2/${i}.jpg`);
 }
 
