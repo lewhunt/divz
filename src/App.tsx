@@ -73,33 +73,33 @@ function Demo1() {
   );
 }
 
+const demo2Images: string[] = [];
+
+/* Demo 2 images generated in Midjourney by Manoela Ilic:
+https://github.com/codrops/LayersAnimation/
+*/
+for (let i = 1; i <= 6; i++) {
+  demo2Images.push(`./demo2/${i}.jpg`);
+}
+
 function Demo2() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <>
-      <img className="background" src="./demo2/desert-7162926_1920.jpg" />
+      <img className="background" src={`./demo2/${selectedIndex + 1}.jpg`} />
 
       <Divz
         className="demo2"
         autoPlay={true}
         isExpanded={false}
-        onIndexChange={(i) => console.log("divz selected index: ", i)}
+        onIndexChange={(i) => setSelectedIndex(i)}
         onPlaying={(i) => console.log("divz playing: ", i)}
       >
-        <div>
-          <img src="./demo2/desert-1101123_1920.jpg" />
-        </div>
-
-        <div>
-          <img src="./demo2/desert-7162926_1920.jpg" />
-        </div>
-
-        <div>
-          <img src="./demo2/camels-4134934_1920.jpg" />
-        </div>
-
-        <div>
-          <img src="./demo2/namibia-2049203_1920.jpg" />
-        </div>
+        {demo2Images.map((imageUrl, index) => (
+          <div key={index}>
+            <img src={imageUrl} />
+          </div>
+        ))}
       </Divz>
     </>
   );
