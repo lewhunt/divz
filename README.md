@@ -61,27 +61,22 @@ function App() {
 The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience.
 
 ```jsx
-function Demo2() {
-  const [selectedIndex, setSelectedIndex] = useState < number > 0;
-  return (
-    <>
-      <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
+<>
+  <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
 
-      <Divz
-        className="demo2"
-        autoPlay={true}
-        autoPlayDuration={5000}
-        onIndexChange={(i) => setSelectedIndex(i)}
-      >
-        {demo2Images.map((imageUrl, index) => (
-          <div key={index}>
-            <img src={imageUrl} />
-          </div>
-        ))}
-      </Divz>
-    </>
-  );
-}
+  <Divz
+    className="demo2"
+    autoPlay={true}
+    autoPlayDuration={5000}
+    onIndexChange={(i) => setSelectedIndex(i)}
+  >
+    {demo2Images.map((imageUrl, index) => (
+      <div key={index}>
+        <img src={imageUrl} />
+      </div>
+    ))}
+  </Divz>
+</>
 ```
 
 <br/>
