@@ -61,24 +61,27 @@ function App() {
 The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience.
 
 ```jsx
-<Divz
-  autoPlay={true}
-  autoPlayDuration={4000}
-  onIndexChange={(i) => console.log("divz selected index: ", i)}
-  onPlaying={(i) => console.log("divz playing status: ", i)}
->
-  <div>
-    <img src="https://image.tmdb.org/t/p/w1280/rRBD8ORo9y34tYkAQJVbn4Ml6tu.jpg" />
-  </div>
+function Demo2() {
+  const [selectedIndex, setSelectedIndex] = useState < number > 0;
+  return (
+    <>
+      <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
 
-  <div>
-    <img src="https://image.tmdb.org/t/p/w1280/vJGgox2d4HWmm3icilCytCC6RCR.jpg" />
-  </div>
-
-  <div>
-    <img src="https://image.tmdb.org/t/p/w1280/36q3LejjQbpyhhuMpJN6kALbFtR.jpg" />
-  </div>
-</Divz>
+      <Divz
+        className="demo2"
+        autoPlay={true}
+        autoPlayDuration={5000}
+        onIndexChange={(i) => setSelectedIndex(i)}
+      >
+        {demo2Images.map((imageUrl, index) => (
+          <div key={index}>
+            <img src={imageUrl} />
+          </div>
+        ))}
+      </Divz>
+    </>
+  );
+}
 ```
 
 <br/>
@@ -135,6 +138,7 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 ## Credits
 
 Sample media used in the demos are from various open source projects:
+
 - Demo 2 images are generated in Midjourney by Manoela Ilic [(link)](https://github.com/codrops/LayersAnimation/)
 - Demo 3 images and video are from Pixabay [(link)](https://pixabay.com/)
 - Demo 4 images are generated in Midjourney by Manoela Ilic [(link)](https://github.com/codrops/GridItemHoverEffect/)
@@ -148,4 +152,3 @@ I hope this has given a good intro to the component and you get some use out of 
 [💬 Fire over a comment](https://github.com/lewhunt/divz/issues) if you have any feedback, requests or issues 🐛
 
 [⭐ Give it a star](https://github.com/lewhunt/divz) if you like the component or want to bookmark it 🙏
-

@@ -166,7 +166,7 @@ function Demo4() {
             <img src={imageUrl} />
             <figcaption>
               <div>{(index + 1).toString().padStart(2, "0")}</div>
-              <div>{imageUrl}</div>
+              <div>{`demo4/${index + 1}.jpg`}</div>
             </figcaption>
           </figure>
         ))}
