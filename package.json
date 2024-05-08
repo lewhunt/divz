@@ -3,7 +3,7 @@
   "author": "Lewis Hunt",
   "description": "A React UI component that lets you scroll, swipe & zoom through HTML elements on the 3D z-axis",
   "private": false,
-  "version": "1.1.4",
+  "version": "1.1.5",
   "type": "module",
   "homepage": "https://lewhunt.github.io/divz",
   "repository": "https://github.com/lewhunt/divz.git",
@@ -19,9 +19,11 @@
   },
   "dependencies": {
     "classnames": "^2.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "vite-plugin-css-injected-by-js": "^3.3.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.0.0",
