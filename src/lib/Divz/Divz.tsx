@@ -18,6 +18,7 @@ type DivzProps = {
   isDarkMode?: boolean;
   autoPlay?: boolean;
   isAutoPlayLooped?: boolean;
+  isScrollPageEnabled?: boolean;
   autoPlayDuration?: number;
   showPlayButton?: boolean;
   showNavButtons?: boolean;
@@ -36,6 +37,7 @@ export const Divz: React.FC<DivzProps> = ({
   isDarkMode = false,
   autoPlay = false,
   isAutoPlayLooped = true,
+  isScrollPageEnabled = false,
   autoPlayDuration = 5000,
   showPlayButton = true,
   showNavButtons = true,
@@ -44,6 +46,7 @@ export const Divz: React.FC<DivzProps> = ({
   onIndexChange,
   onPlaying,
 }) => {
+  const divzRef = useRef<HTMLDivElement>(null);
   const divzListRef = useRef<HTMLDivElement>(null);
   const numChildren = React.Children.count(children);
   const [touchStartY, setTouchStartY] = useState<number>(0);
@@ -156,6 +159,13 @@ export const Divz: React.FC<DivzProps> = ({
   useEffect(() => setExpanded(isExpanded), [isExpanded]);
   useEffect(() => setPlaying(autoPlay), [autoPlay]);
 
+  useEffect(() => {
+    document.body.style.overflow = isScrollPageEnabled ? "auto" : "hidden";
+    isScrollPageEnabled
+      ? divzRef.current!.classList.add("scroll-page-enabled")
+      : divzRef.current!.classList.remove("scroll-page-enabled");
+  }, [isScrollPageEnabled]);
+
   const updateSelectedIndex = () => {
     const currentIndex = Math.abs(Math.round(zoomLevel.current / snapInterval));
     setSelectedIndex(currentIndex);
@@ -252,6 +262,7 @@ export const Divz: React.FC<DivzProps> = ({
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
         onWheel={handleWheel}
+        ref={divzRef}
       >
         <div className="divz-viewport">
           <div className="divz-list" ref={divzListRef}>
