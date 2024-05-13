@@ -1,17 +1,18 @@
-import { useState, useEffect } from "react";
-import { Divz } from "./lib/Divz";
-
+import { useState } from "react";
+import { Divz, DivzVideoItem } from "./lib/Divz";
 import "./App.css";
 
 function App() {
-  const [demo, setDemo] = useState<number>(1);
+  const [demo, setDemo] = useState<number>(3);
 
+  /* hard-coded to demo 3 for now
   useEffect(() => randomizeDemo(), []);
 
   const randomizeDemo = () => {
     const randomNumber = Math.floor(Math.random() * 4) + 1;
     setDemo(randomNumber);
   };
+  */
 
   const isActive = (link: number) => {
     return link === demo ? "active" : "";
@@ -56,7 +57,7 @@ function App() {
 
 function Demo1() {
   return (
-    <Divz autoPlay={true} autoPlayDuration={3000} className="demo1">
+    <Divz autoPlay={true} autoPlayDuration={2000} className="demo1">
       <div>
         <h1>1</h1>
       </div>
@@ -105,7 +106,25 @@ function Demo2() {
   );
 }
 
+// Demo 3 assets from Pixabay and Runway
+const demo3Assets = [
+  {
+    image: "./demo3/astronaut-4106766_1280.jpg",
+    video: "./demo3/astronaut-4106766_1280.mp4",
+  },
+  {
+    image: "./demo3/astronaut-6052199_1280.jpg",
+    video: "./demo3/astronaut-6052199_1280.mp4",
+  },
+  {
+    image: "./demo3/plane-5462276_1280.jpg",
+    video: "./demo3/plane-5462276_1280.mp4",
+  },
+];
+
 function Demo3() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+
   return (
     <>
       <video autoPlay playsInline loop muted className="background">
@@ -115,19 +134,25 @@ function Demo3() {
         />
       </video>
 
-      <Divz autoPlay={true} className="demo3" isDarkMode={true}>
-        <div>
-          <img src="./demo3/astronaut-4106766_1280.jpg" />
-        </div>
+      <Divz
+        autoPlay={true}
+        autoPlayDuration={7000}
+        className="demo3"
+        isDarkMode={true}
+        onIndexChange={(i) => setSelectedIndex(i)}
+      >
+        {/* Example of using a custom video component that loads/plays only when item is active, also with preview image */}
+        {demo3Assets.map((item, index) => (
+          <DivzVideoItem
+            key={index}
+            index={index}
+            isActive={index === selectedIndex}
+            previewImage={item.image}
+            videoSource={item.video}
+          ></DivzVideoItem>
+        ))}
 
-        <div>
-          <img src="./demo3/astronaut-6052199_1280.jpg" />
-        </div>
-
-        <div>
-          <img src="./demo3/plane-5462276_1280.jpg" />
-        </div>
-
+        {/* Example of just using a standard video element that loads immediately */}
         <div>
           <video autoPlay playsInline loop muted>
             <source

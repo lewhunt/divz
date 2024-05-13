@@ -47,6 +47,25 @@
       width: 100%;
       object-fit: cover;
     }
+
+    .divz-video-item,
+    &.divz-video-item {
+      img,
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      video {
+        transition: opacity 0.5s;
+        &.show {
+          opacity: 1;
+        }
+        &.hide {
+          opacity: 0;
+        }
+      }
+    }
   }
 
   &.expanded > * {
