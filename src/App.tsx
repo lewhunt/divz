@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Divz, DivzVideoItem } from "./lib/Divz";
 import "./App.css";
 
 function App() {
-  const [demo, setDemo] = useState<number>(3);
+  const [demo, setDemo] = useState<number>(1);
 
-  /* hard-coded to demo 3 for now
   useEffect(() => randomizeDemo(), []);
 
   const randomizeDemo = () => {
     const randomNumber = Math.floor(Math.random() * 4) + 1;
     setDemo(randomNumber);
   };
-  */
 
   const isActive = (link: number) => {
     return link === demo ? "active" : "";
@@ -57,7 +55,7 @@ function App() {
 
 function Demo1() {
   return (
-    <Divz autoPlay={true} autoPlayDuration={2000} className="demo1">
+    <Divz autoPlay={true} autoPlayDuration={3000} className="demo1">
       <div>
         <h1>1</h1>
       </div>
@@ -141,7 +139,7 @@ function Demo3() {
         isDarkMode={true}
         onIndexChange={(i) => setSelectedIndex(i)}
       >
-        {/* Example of using a custom video component that loads/plays only when item is active, also with preview image */}
+        {/* Example of using a custom video component that loads/plays when item is active */}
         {demo3Assets.map((item, index) => (
           <DivzVideoItem
             key={index}
