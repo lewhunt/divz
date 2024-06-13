@@ -143,7 +143,7 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 
 Sample media used in the [demos](https://lewhunt.github.io/divz/) are from various open source projects:
 
-- Demo 2 and 3 images and videos are from [Pixabay](https://pixabay.com/) and [Runway](https://runwayml.com/)
+- Demo 2 & 3 images and videos are from [Pixabay](https://pixabay.com/) and [Runway](https://runwayml.com/)
 - Demo 4 images are generated in [Midjourney](https://www.midjourney.com/) by [Manoela Ilic](https://github.com/codrops/GridItemHoverEffect/)
 
 <br/>
