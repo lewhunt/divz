@@ -61,35 +61,29 @@ function App() {
 The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience. Demo 3 goes even further and uses a custom video component with preview images, optimised to only play video when the current item is active:
 
 ```jsx
-<>
-  <video autoPlay playsInline loop muted className="background">
-    <source
-      src="./demo3/star-stars-night-space-light-121702.mp4"
-      type="video/mp4"
-    />
-  </video>
-
-  <Divz
-    autoPlay={true}
-    isDarkMode={true}
-    onIndexChange={(i) => setSelectedIndex(i)}
-  >
-    {demo3Assets.map((item, index) => (
-      <DivzVideoItem
-        key={index}
-        index={index}
-        isActive={index === selectedIndex}
-        previewImage={item.image}
-        videoSource={item.video}
-      ></DivzVideoItem>
-    ))}
-  </Divz>
-</>
+<Divz
+  autoPlay={true}
+  autoPlayDuration={7000}
+  isDarkMode={true}
+  onIndexChange={(i) => setSelectedIndex(i)}
+>
+  {demo3Assets.map((item, index) => (
+    <DivzVideoItem
+      key={index}
+      index={index}
+      isActive={index === selectedIndex}
+      previewImage={item.image}
+      videoSource={item.video}
+    ></DivzVideoItem>
+  ))}
+</Divz>
 ```
 
 <br/>
 
-https://github.com/lewhunt/divz/assets/9886284/0f35aa4a-a663-4566-8b4b-cbbd56eae824
+Here's a quick video of Demo 2, utilising dark mode, images and basic video elements:
+
+https://github.com/lewhunt/divz/assets/9886284/25c5f39b-5ab7-4088-8fa8-e23f4bb80498
 
 <br/>
 
