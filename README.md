@@ -89,7 +89,7 @@ The demos illustrate how the component can be initialised with more props - alon
 
 <br/>
 
-https://github.com/lewhunt/divz/assets/9886284/9c51fec4-f0e6-4753-9e91-7aca5546ff18
+https://github.com/lewhunt/divz/assets/9886284/0f35aa4a-a663-4566-8b4b-cbbd56eae824
 
 <br/>
 
