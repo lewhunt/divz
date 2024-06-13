@@ -17,7 +17,7 @@ function App() {
   };
 
   return (
-    <div className={`app ${demo >= 3 ? "dark-mode" : ""}`}>
+    <div className={`app ${demo >= 2 ? "dark-mode" : ""}`}>
       <div className="app-header">
         <div className={`demo-list`}>
           {[1, 2, 3, 4].map((demoNumber) => (
@@ -72,33 +72,37 @@ function Demo1() {
   );
 }
 
-const demo2Images: string[] = [];
-
-/* Demo 2 images generated in Midjourney by Manoela Ilic:
-https://github.com/codrops/LayersAnimation/
-*/
-for (let i = 1; i <= 5; i++) {
-  demo2Images.push(`./demo2/${i}.jpg`);
-}
-
 function Demo2() {
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   return (
     <>
-      <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
+      <video autoPlay playsInline loop muted className="background">
+        <source
+          src="./demo3/star-stars-night-space-light-121702.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      <Divz
-        className="demo2"
-        autoPlay={true}
-        isExpanded={false}
-        onIndexChange={(i) => setSelectedIndex(i)}
-        onPlaying={(i) => console.log("divz playing: ", i)}
-      >
-        {demo2Images.map((imageUrl, index) => (
-          <div key={index}>
-            <img src={imageUrl} />
-          </div>
-        ))}
+      <Divz autoPlay={true} className="demo2" isDarkMode={true}>
+        <div>
+          <img src="./demo3/astronaut-4106766_1280.jpg" />
+        </div>
+
+        <div>
+          <img src="./demo3/astronaut-6052199_1280.jpg" />
+        </div>
+
+        <div>
+          <img src="./demo3/plane-5462276_1280.jpg" />
+        </div>
+
+        <div>
+          <video autoPlay playsInline loop muted>
+            <source
+              src="./demo3/space-ship-magic-purple-sci-fi-53601.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
       </Divz>
     </>
   );

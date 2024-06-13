@@ -58,22 +58,30 @@ function App() {
 
 ## Advanced Usage
 
-The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience. Demo 3 also uses a custom video component with preview images, which optimises load and plays only when the current item is active/selected.
+The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience. Demo 3 goes even further and uses a custom video component with preview images, optimised to only play video when the current item is active:
 
 ```jsx
 <>
-  <img className="background" src={`./demo2/${selectedIndex + 1}-bg.jpg`} />
+  <video autoPlay playsInline loop muted className="background">
+    <source
+      src="./demo3/star-stars-night-space-light-121702.mp4"
+      type="video/mp4"
+    />
+  </video>
 
   <Divz
-    className="demo2"
     autoPlay={true}
-    autoPlayDuration={5000}
+    isDarkMode={true}
     onIndexChange={(i) => setSelectedIndex(i)}
   >
-    {demo2Images.map((imageUrl, index) => (
-      <div key={index}>
-        <img src={imageUrl} />
-      </div>
+    {demo3Assets.map((item, index) => (
+      <DivzVideoItem
+        key={index}
+        index={index}
+        isActive={index === selectedIndex}
+        previewImage={item.image}
+        videoSource={item.video}
+      ></DivzVideoItem>
     ))}
   </Divz>
 </>
@@ -135,8 +143,7 @@ Under the hood, Divz performs CSS3 transforms on the core component and the chil
 
 Sample media used in the [demos](https://lewhunt.github.io/divz/) are from various open source projects:
 
-- Demo 2 images are generated in [Midjourney](https://www.midjourney.com/) by [Manoela Ilic](https://github.com/codrops/LayersAnimation/)
-- Demo 3 images and videos are from [Pixabay](https://pixabay.com/) and [Runway](https://runwayml.com/)
+- Demo 2 and 3 images and videos are from [Pixabay](https://pixabay.com/) and [Runway](https://runwayml.com/)
 - Demo 4 images are generated in [Midjourney](https://www.midjourney.com/) by [Manoela Ilic](https://github.com/codrops/GridItemHoverEffect/)
 
 <br/>
