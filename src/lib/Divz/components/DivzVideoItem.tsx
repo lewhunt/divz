@@ -7,7 +7,7 @@ type DivzVideoItemProps = {
   videoSource: string;
   previewImage?: string;
   index?: number;
-  isActive?: boolean;
+  selectedIndex?: number;
   videoDelay?: number;
   autoPlay?: boolean;
   loop?: boolean;
@@ -21,7 +21,7 @@ export const DivzVideoItem: React.FC<DivzVideoItemProps> = ({
   videoSource,
   previewImage,
   index = 0,
-  isActive = true,
+  selectedIndex = 0,
   videoDelay = 2000,
   autoPlay = true,
   loop = false,
@@ -34,6 +34,7 @@ export const DivzVideoItem: React.FC<DivzVideoItemProps> = ({
   const [showSource, setShowSource] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const timer = useRef<any>(null);
+  const isActive = index === selectedIndex;
 
   const togglePlayback = () => {
     const node = videoRef.current;

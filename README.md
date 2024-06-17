@@ -71,7 +71,7 @@ The demos illustrate how the component can be initialised with more props - alon
     <DivzVideoItem
       key={index}
       index={index}
-      isActive={index === selectedIndex}
+      selectedIndex={selectedIndex}
       previewImage={item.image}
       videoSource={item.video}
     ></DivzVideoItem>

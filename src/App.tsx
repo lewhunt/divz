@@ -148,7 +148,7 @@ function Demo3() {
           <DivzVideoItem
             key={index}
             index={index}
-            isActive={index === selectedIndex}
+            selectedIndex={selectedIndex}
             previewImage={item.image}
             videoSource={item.video}
           ></DivzVideoItem>
