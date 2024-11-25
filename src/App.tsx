@@ -147,7 +147,6 @@ function Demo3() {
         className="demo3"
         isDarkMode={true}
         isExpanded={true}
-        showExpandButton={false}
         showPlayButton={false}
         onIndexChange={(i) => setSelectedIndex(i)}
       >

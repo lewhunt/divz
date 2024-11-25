@@ -63,7 +63,6 @@ The demos illustrate how the component can be initialised with more props - alon
 ```jsx
 <Divz
   isExpanded={true}
-  showExpandButton={false}
   showPlayButton={false}
   onIndexChange={(i) => setSelectedIndex(i)}
 >
