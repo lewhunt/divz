@@ -82,7 +82,12 @@ function Demo2() {
         />
       </video>
 
-      <Divz autoPlay={true} className="demo2" isDarkMode={true}>
+      <Divz
+        autoPlay={true}
+        autoPlayDuration={3000}
+        className="demo2"
+        isDarkMode={true}
+      >
         <div>
           <img src="./demo3/astronaut-4106766_1280.jpg" />
         </div>
@@ -141,6 +146,9 @@ function Demo3() {
         autoPlayDuration={7000}
         className="demo3"
         isDarkMode={true}
+        isExpanded={true}
+        showExpandButton={false}
+        showPlayButton={false}
         onIndexChange={(i) => setSelectedIndex(i)}
       >
         {/* Example of using a custom video component that loads/plays when item is active */}

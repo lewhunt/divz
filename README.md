@@ -58,13 +58,13 @@ function App() {
 
 ## Advanced Usage
 
-The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience. Demo 3 goes even further and uses a custom video component with preview images, optimised to only play video when the current item is the selected index (active):
+The demos illustrate how the component can be initialised with more props - along with images and videos inside the child divs - for a richer user experience. Demo 3 uses a custom video component with preview images, optimised to only play video when the current item is active:
 
 ```jsx
 <Divz
-  autoPlay={true}
-  autoPlayDuration={7000}
-  isDarkMode={true}
+  isExpanded={true}
+  showExpandButton={false}
+  showPlayButton={false}
   onIndexChange={(i) => setSelectedIndex(i)}
 >
   {demo3Assets.map((item, index) => (
